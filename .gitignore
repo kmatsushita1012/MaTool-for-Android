@@ -46,3 +46,6 @@ app.*.map.json
 key.properties
 android/app/key.jks
 lib/constants.dart
+
+android/app/build.gradle
+android/app/src/main/AndroidManifest.xml
