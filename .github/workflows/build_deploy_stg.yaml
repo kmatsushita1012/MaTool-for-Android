@@ -1,0 +1,22 @@
+name: "build & deploy stg app"
+on:
+  push:
+jobs:
+  analyze_and_test:
+    uses: ./.github/workflows/analyze_test.yaml
+    secrets:
+      FIREBASE_PROJ_DEV_NAME: ${{ secrets.FIREBASE_PROJ_DEV_NAME }} #ok
+      FIREBASE_AUTH_TOKEN: ${{ secrets.FIREBASE_AUTH_TOKEN }} #ok
+
+  android_build_stg:
+    needs: [analyze_and_test]
+    uses: ./.github/workflows/android_build_stg.yaml
+    secrets:
+      FIREBASE_PROJ_DEV_NAME: ${{ secrets.FIREBASE_PROJ_DEV_NAME }} #ok
+      FIREBASE_AUTH_TOKEN: ${{ secrets.FIREBASE_AUTH_TOKEN }} #ok
+      ANDROID_KEY_JKS: ${{ secrets.ANDROID_KEY_JKS }} #ok
+      ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }} #ok
+      ANDROID_ALIAS_PASSWORD: ${{ secrets.ANDROID_ALIAS_PASSWORD }} #ok
+      ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }} #ok
+      FIREBASE_DEV_ANDROID_ID: ${{ secrets.FIREBASE_DEV_ANDROID_ID }} #ok
+      FIREBASE_DEV_TOKEN: ${{ secrets.FIREBASE_DEV_TOKEN }} #ok
