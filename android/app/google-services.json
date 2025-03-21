@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1034239276746",
+    "project_id": "matool-90b1d",
+    "storage_bucket": "matool-90b1d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034239276746:android:06edb426278f3db2c52633",
+        "android_client_info": {
+          "package_name": "com.studiomk.matool"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzL7__Iz1r7WClE9Cx5WG4UJ31uCio5U8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

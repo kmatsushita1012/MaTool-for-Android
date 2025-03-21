@@ -1,4 +1,4 @@
-package com.example.matool2
+package com.studiomk.matool
 
 import io.flutter.embedding.android.FlutterActivity
 
